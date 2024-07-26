@@ -6,7 +6,7 @@
 </p>
 
 ## Steps to create a new Laravel.x auth project using bootstrap and laravel/ui
-- Create a new Laravel 10.x project `composer create-project laravel/laravel **your_project_name**`
+- Create a new Laravel 10.x project `composer create-project laravel/laravel:^10 your-project-name*`
 - Install the needed package `composer require laravel/ui`
 - Apply the new auth scaffolding using bootstrap and laravel/ui: `php artisan ui bootstrap --auth`
 - Run `npm i` and
