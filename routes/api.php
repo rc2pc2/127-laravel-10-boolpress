@@ -22,19 +22,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::middleware("custom.api.auth")->name('api.')->group(function(){
-    Route::get("/posts", [PostController::class, "index"] )->name('posts.index');
-    Route::get("/posts/{post}", [PostController::class, "show"] )->name('posts.show');
+// Route::get("/posts", [PostController::class, "index"] )->name('posts.index');
+// Route::get("/posts/{post}", [PostController::class, "show"] )->name('posts.show');
 
-    Route::get("/users", [UserController::class, "index"] )->name('users.index');
-    Route::get("/users/search", [UserController::class, "userSearch"] )->name('users.search');
-    Route::get("/users/{user}", [UserController::class, "show"] )->name('users.show');
+// Route::get("/users", [UserController::class, "index"] )->name('users.index');
+// Route::get("/users/search", [UserController::class, "userSearch"] )->name('users.search');
+// Route::get("/users/{user}", [UserController::class, "show"] )->name('users.show');
 
+// Route::middleware("custom.api.auth")->name('api.')->group(function(){
+//     // Route::get("/categories", [CategoryController::class, "index"] )->name('categories.index');
+//     // Route::get("/categories/{category}", [CategoryController::class, "show"] )->name('categories.show');
 
-    // Route::get("/categories", [CategoryController::class, "index"] )->name('categories.index');
-    // Route::get("/categories/{category}", [CategoryController::class, "show"] )->name('categories.show');
-
-    Route::patch("/categories/{category}/restore", [CategoryController::class, "restore"] )->name('categories.restore');
-    Route::delete("/categories/{category}/permanent-delete", [CategoryController::class, "permanentDestroy"] )->name('categories.permanent-destroy');
-    Route::resource("/categories", CategoryController::class)->except(["create", "edit"]);
-});
+//     Route::patch("/categories/{category}/restore", [CategoryController::class, "restore"] )->name('categories.restore');
+//     Route::delete("/categories/{category}/permanent-delete", [CategoryController::class, "permanentDestroy"] )->name('categories.permanent-destroy');
+//     Route::resource("/categories", CategoryController::class)->except(["create", "edit"]);
+// });
