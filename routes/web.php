@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\HomeController as GuestHomeController;
+use App\Http\Controllers\LeadController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +26,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [GuestHomeController::class, 'index'])->name('home');
+Route::get('/contact', [LeadController::class, 'create'])->name('leads.create');
+Route::post('/contact', [LeadController::class, 'store'])->name('leads.store');
 
 Route::middleware('auth')->name('admin.')->prefix('admin/')->group(function(){
-        // rotte protette
+        Route::resource("/posts", AdminPostController::class);
+        Route::resource("/categories", AdminCategoryController::class);
     }
 );
 
