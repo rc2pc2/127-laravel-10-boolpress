@@ -25,7 +25,7 @@ php artisan optimize
 echo "Running npm run prod"
 
 # Compile npm assets
-npm run prod
+npm run build
 
 echo "Migrating..."
 
