@@ -7,6 +7,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12">
+            <h2>
+                Latest categories:
+            </h2>
             <table class="table table-hover table-striped mb-4 p-3">
                 <thead>
                     <tr>

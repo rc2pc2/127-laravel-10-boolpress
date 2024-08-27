@@ -9,6 +9,9 @@
         {{-- @dump(Auth::user())
         @dump(Auth::user()->isAdmin()) --}}
         <div class="col-12">
+            <h2>
+                Latest posts:
+            </h2>
             <table class="table table-hover table-striped mb-4 p-3">
                 <thead>
                     <tr>
