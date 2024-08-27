@@ -8,7 +8,7 @@ echo "Starting application deploy"
 (php artisan down) || true
 
 # Pull the latest version of the app
-git pull origin production
+git pull origin develop
 
 echo "Running composer install"
 
@@ -25,7 +25,7 @@ php artisan optimize
 echo "Running npm run prod"
 
 # Compile npm assets
-npm run prod
+npm run build
 
 echo "Migrating..."
 
